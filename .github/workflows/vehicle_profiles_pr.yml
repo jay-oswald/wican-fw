@@ -55,7 +55,7 @@ jobs:
         if: success()
         uses: actions/github-script@v7
         env:
-          link: '${{steps.upload.artifact-url}}'
+          link: '${{steps.upload.outputs.artifact-url}}'
         with:
           script: |
             const {link} = process.env;
